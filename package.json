@@ -1,0 +1,15 @@
+{
+  "name": "cypress-website-automatisation-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Justin2997/cypress-website-automatisation-template.git",
+  "author": "Justin Brûlotte <justin.brlotte797@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^9.4.1"
+  },
+  "scripts": {
+    "start": "cypress run",
+    "open": "cypress open"
+  }
+}

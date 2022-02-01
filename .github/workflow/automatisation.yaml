@@ -1,0 +1,15 @@
+name: Web site automation
+jobs:
+  website-automatisation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Cypress Run
+        uses: cypress-io/github-action@v2
+        with:
+          record: true
