@@ -1,4 +1,7 @@
 name: Web site automation
+on:
+  schedule:
+    - cron: "0 20 * * *"
 jobs:
   website-automatisation:
     runs-on: ubuntu-latest
@@ -16,3 +19,4 @@ jobs:
         env:
           CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
           CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
+          CYPRESS_RECORD_KEY: "a6359fc9-cbaf-4107-95cc-5d38edf88e40"
