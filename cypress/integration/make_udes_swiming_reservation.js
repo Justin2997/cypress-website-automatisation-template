@@ -18,8 +18,11 @@ describe("UdeS reservation", () => {
 
       cy.scrollTo("top");
 
-      cy.get("#CodeUtilisateur").type("", { force: true });
-      cy.get("#motPasse").type("", { force: true });
+      const username = Cypress.env('USERNAME');
+      const password = Cypress.env('PASSWORD');
+
+      cy.get("#CodeUtilisateur").type(username, { force: true });
+      cy.get("#motPasse").type(password, { force: true });
       cy.get("button").first().click({force: true}).wait(1000);
     });
 
@@ -31,5 +34,8 @@ describe("UdeS reservation", () => {
       cy.scrollTo("bottom");
 
       cy.get(".divider").eq(-2).nextUntil('input[type="checkbox"]').find('input[type="checkbox"]').first().click({force: true}).wait(2500);
+
+      cy.get("#save").click({force: true}).wait(2500);
+      cy.contains("Vos places ont été enregistrées avec succès").should("be.visible");
     });
   });

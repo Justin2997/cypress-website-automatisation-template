@@ -1,6 +1,7 @@
 {
     "env": {
-      "url": "https://dev.dma.immo/la-suite-gym/"
+      "USERNAME": "bruj3102",
+      "PASSWORD": ""
     },
     "viewportWidth": 1000,
     "viewportHeight": 900,
